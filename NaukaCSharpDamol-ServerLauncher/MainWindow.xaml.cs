@@ -37,7 +37,14 @@ namespace NaukaCSharpDamol_ServerLauncher
         {
             try
             {
-                Process.Start("NaukaCSharpDamol-Serwer.exe");
+                if (Status.Content.ToString() == "OFF")
+                {
+                    Process.Start("NaukaCSharpDamol-Serwer.exe");
+                }
+                else
+                {
+                    MessageBox.Show("Server is already started.","Error")
+                }
             }
             catch(Win32Exception ex)
             {
