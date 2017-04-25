@@ -43,7 +43,7 @@ namespace NaukaCSharpDamol_ServerLauncher
                 }
                 else
                 {
-                    MessageBox.Show("Server is already started.","Error")
+                    MessageBox.Show("Server is already started.", "Error");
                 }
             }
             catch(Win32Exception ex)
