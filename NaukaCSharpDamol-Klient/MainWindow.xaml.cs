@@ -1,4 +1,7 @@
-﻿using System;
+﻿#define DEBUG
+#undef DEBUG
+
+using System;
 using System.IO;
 using System.Net.Sockets;
 using System.Threading;
@@ -38,7 +41,7 @@ namespace NaukaCSharpDamol_Klient
                 MessageBox.Show(ex.ToString(), "DEBUG INFORMATION");
 #endif
 
-                MessageBox.Show("Can't connect to server. Exiting.");
+                MessageBox.Show("Can't connect to server. Server is propably offline. Exiting.");
                 Environment.Exit(0);
             }
         }
